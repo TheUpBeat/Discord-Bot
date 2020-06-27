@@ -1,3 +1,4 @@
+import os
 import base64
 import discord
 from discord.ext import commands
