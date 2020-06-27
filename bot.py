@@ -55,4 +55,4 @@ for filename in os.listdir('./cogs'):
 #
 # client.loop.create_task(update_stats())
 
-client.run('id')
+client.run('id') # id = Bot Token
