@@ -44,11 +44,11 @@ class Convert(commands.Cog):
                 return url
             elif str.startswith(YT):
                 count = 1
-                url = YT_TO + + "watch?" + (urlparse(i).query)
+                url = YT_TO +"watch" + "?" + (urlparse(i).query)
                 return url
             elif str.startswith(YT_TO):
                 count = 1
-                url = YT + + "watch?" + (urlparse(i).query)
+                url = YT + "watch" + "?" + (urlparse(i).query)
                 return url
             else:
                 count = 0
