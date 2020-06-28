@@ -4,17 +4,19 @@ from discord.ext import commands
 import time
 import asyncio
 
-client = commands.Bot(command_prefix = 'sudo ')
+client = commands.Bot(command_prefix = '-') #Change the prefix to your wish
 
-
+# To Load the cogs if anything is newly added.
 @client.command()
 async def load(ctx, extension):
     client.load_extension('cogs.{}'.format(extension))
 
+# To unLoad the cogs.
 @client.command()
 async def unload(ctx, extension):
     client.unload_extension('cogs.{}'.format(extension))
 
+# To reload all the cogs.
 @client.command()
 async def reload(ctx, extension):
     client.load_extension('cogs.{}'.format(extension))
@@ -24,6 +26,7 @@ for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         client.load_extension('cogs.{}'.format(filename[:-3]))
 
+# To get status of the server every 5 seconds. Will be updated to store all the messages.
 # messages = joined = 0
 #
 # async def update_stats():
