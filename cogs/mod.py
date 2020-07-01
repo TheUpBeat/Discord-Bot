@@ -55,13 +55,4 @@ class Mod(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Base(client))
-
-async def on_member_join(self, member):
-    channel = client.get_channel(id)
-    await channel.send('{} has the joined server'.format(member))
-
-
-
-def setup(client):
     client.add_cog(Mod(client))
