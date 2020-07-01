@@ -52,10 +52,7 @@ class Convert(commands.Cog):
                 return url
             else:
                 count = 0
-
-        if message.channel.id == "id":
-            pass
-
+                
         string = str(message.content)
         li = list(string.split(" "))
         for i in li:
